@@ -15,24 +15,26 @@
 
 using namespace std;
 
-//void printWelcome();
-//void buildList(string filename, CollegeList &list);
-//void deleteManager(CollegeList &list);
-//void searchManager(CollegeList &list);
-//void printDone(void);
+void printWelcome();
+void buildList(string filename, CollegeList &list);
+void deleteManager(CollegeList &list);
+void searchManager(CollegeList &list);
+void printDone(void);
+void insertManager();
 
 int main()
 {
-    //const char inputFileName[] = "colleges.txt";
-    //CollegeList list;
-    //printWelcome();
-    //buildList(inputFileName, list);
-    //list.displayList();
-    //cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
-    //searchManager(list);
-    //deleteManager(list);
-    //cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
-    //printDone();
+    const char inputFileName[] = "colleges.txt";
+    CollegeList list;
+    printWelcome();
+    buildList(inputFileName, list);
+    list.displayList();
+    cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
+    searchManager(list);
+    deleteManager(list);
+    cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
+    printDone();
+    insertManager();
     
     return 0;
 }
@@ -112,7 +114,7 @@ void deleteManager(CollegeList &list)
  Search manager: search the list until the user enters Q
  Input Parameter: list
  **********************************************************************/
-/*
+
 void searchManager(CollegeList &list)
 {
     College col;
@@ -137,7 +139,7 @@ void searchManager(CollegeList &list)
     cout << endl;
     cout << "___________________END SEARCH SECTION _____\n";
 }
-*/
+
 /**********************************************************************
  Farewell information
  **********************************************************************/
@@ -145,6 +147,55 @@ void printDone(void)
 {
     cout << "\n\n\t\t *~~*~~* THE END *~~*~~*\n"
     << "\t     Thank you for using my program! \n\n";
+}
+void insertManager(){
+    string collegeName;
+    string rank;//is a string to allow for the isalpha function to test if there are letters in the rank which should be a number
+    int found_date;
+    double graduation_and_transfer_rate;
+    double cost_of_attendence;
+    int number_of_students;
+    
+    cout<<"What is the college's name"<<endl;
+    cin>>collegeName;
+    
+    cout<<"What is the college's rank"<<endl;
+    cin>>rank;
+    for(int i = 0; i < rank.length();i++){
+        if(isalpha(rank[i]) != 0){
+            cout<<"There is a letter in the rank variable"<<endl;
+            cin>>rank;
+            i = 0;//resets the loop to check again if there is a letter in the string
+        }
+    }
+    
+    cout<<"when was the school found"<<endl;
+    cin>>found_date;
+    while(found_date > 2019){
+        cout<<"The school can not be found in the future"<<endl;
+        cin>>found_date;
+    }
+    
+    cout<<"what is the school's graduation_and_transfer_rate"<<endl;
+    cin>>graduation_and_transfer_rate;
+    while(graduation_and_transfer_rate < 0 | graduation_and_transfer_rate > 100){//a percentage can not be less than 0 or greater than 100
+        cout<<"the graduation and transfer rate can not be less than 0 or greater than 100"<<endl;
+        cin>>graduation_and_transfer_rate;
+    }
+    
+    cout<<"How much does it cost to go to the school"<<endl;
+    cin>>cost_of_attendence;
+    while(cost_of_attendence < 0){
+        cout<<"Cost of attendence can not be negative"<<endl;
+        cin>>cost_of_attendence;
+    }
+    
+    cout<<"What is the school's population"<<endl;
+    cin>>number_of_students;
+    while(number_of_students < 0){
+        cout<<"the number of students must be positive"<<endl;
+        cin>>number_of_students;
+    }
 }
 
 /***************************************************************

@@ -62,8 +62,3 @@ void College::displayAll()
     << "          Cost of Attendance: $" << cost << endl
     << "          Number of Students: " << noStu << endl;
 }
-/*
-int main(){
-    return 0;
-}
-*/

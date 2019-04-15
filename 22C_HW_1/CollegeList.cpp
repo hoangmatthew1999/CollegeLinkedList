@@ -131,7 +131,7 @@ void CollegeList::displayList() const
     while(pCur != NULL)
     {
         //pCur -> col.display();  //Display the value in the node.
-        pCur = pCur -> next;    //Move to the next node.
+        //pCur = pCur -> next;    //Move to the next node.
         
     }
     cout
