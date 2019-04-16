@@ -42,10 +42,12 @@ College::College(int r, string n, int y, string w, double t, double re,int co, i
 
 void College::display()
 {
+    
     cout << setw(4) << rank << " "
     << left << setw(30) << name
     << right << setw(7) << cost
     << right << setw(11) << noStu << endl;
+    
 }
 
 // Display all data

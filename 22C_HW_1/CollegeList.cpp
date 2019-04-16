@@ -130,12 +130,11 @@ void CollegeList::displayList() const
     //pCur = head->next;          // Position pCur: skip the head of the list.
     while(pCur != NULL)
     {
-        //pCur -> col.display();  //Display the value in the node.
+        pCur -> col.display();  //Display the value in the node.
         //pCur = pCur -> next;    //Move to the next node.
         
     }
-    cout
-    << "==== ============================= ========= ==========" << endl;
+    cout<< "==== ============================= ========= ==========" << endl;
 }
 
 //**************************************************

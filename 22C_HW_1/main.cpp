@@ -10,7 +10,6 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
-
 #include "CollegeList.h"
 
 using namespace std;
@@ -31,7 +30,7 @@ int main()
     list.displayList();
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     searchManager(list);
-    deleteManager(list);
+    //deleteManager(list);
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     printDone();
     insertManager();

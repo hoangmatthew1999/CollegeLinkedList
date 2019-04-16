@@ -53,7 +53,7 @@ public:
     // Other functions
     void display();
     void displayAll();
-    void insertManager();
+    ostream &operator << (ostream &strm);
 };
 
 

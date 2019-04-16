@@ -16,8 +16,8 @@
 		F419AE1D2260057900AA7A53 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -32,8 +32,6 @@
 		F419AE2C226031A200AA7A53 /* College.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = College.cpp; sourceTree = "<group>"; };
 		F419AE302260359A00AA7A53 /* CollegeList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollegeList.cpp; sourceTree = "<group>"; };
 		F419AE312260359A00AA7A53 /* CollegeList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollegeList.hpp; sourceTree = "<group>"; };
-		F41F517F2264088A00C6578C /* CollegeListCPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeListCPP.h; sourceTree = "<group>"; };
-		F41F51802264089A00C6578C /* CollegeCPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeCPP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +67,9 @@
 				F419AE222260057900AA7A53 /* main.cpp */,
 				F419AE29226005B900AA7A53 /* CollegeList.h */,
 				F419AE302260359A00AA7A53 /* CollegeList.cpp */,
-				F41F517F2264088A00C6578C /* CollegeListCPP.h */,
 				F419AE312260359A00AA7A53 /* CollegeList.hpp */,
 				F419AE2A226005EC00AA7A53 /* College.h */,
 				F419AE2C226031A200AA7A53 /* College.cpp */,
-				F41F51802264089A00C6578C /* CollegeCPP.h */,
 			);
 			path = 22C_HW_1;
 			sourceTree = "<group>";
