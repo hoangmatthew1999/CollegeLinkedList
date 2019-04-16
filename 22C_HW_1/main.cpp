@@ -27,10 +27,10 @@ int main()
     CollegeList list;
     printWelcome();
     buildList(inputFileName, list);
-    list.displayList();
+    //list.displayList();
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     searchManager(list);
-    //deleteManager(list);
+    deleteManager(list);
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     printDone();
     insertManager();
