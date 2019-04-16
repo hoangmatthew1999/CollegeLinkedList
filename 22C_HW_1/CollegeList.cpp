@@ -165,9 +165,6 @@ CollegeList::~CollegeList()
     cout << "DEBUG - Destructor: Now deleting the sentinel node rank " << head -> col.getRank() << endl;
     delete head; // delete the sentinel node
 }
-/*
-int main(){
-    return 0;
-}
-*/
+
+
 

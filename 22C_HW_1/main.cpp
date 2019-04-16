@@ -2,7 +2,7 @@
 //  main.cpp
 //  22C_HW_1
 //
-//  Created by home on 4/11/19.
+//  Created by Matthew Hoang on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 #include <string>
 #include <cstdlib>
 #include "CollegeList.h"
+#include "College.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ void buildList(string filename, CollegeList &list);
 void deleteManager(CollegeList &list);
 void searchManager(CollegeList &list);
 void printDone(void);
-void insertManager();
+void insertManager(CollegeList &list);
 
 int main()
 {
@@ -33,7 +34,7 @@ int main()
     deleteManager(list);
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     printDone();
-    insertManager();
+    insertManager(list);
     
     return 0;
 }
@@ -147,12 +148,12 @@ void printDone(void)
     cout << "\n\n\t\t *~~*~~* THE END *~~*~~*\n"
     << "\t     Thank you for using my program! \n\n";
 }
-void insertManager(){
+void insertManager(CollegeList &list){
     string collegeName;
     string rank;//is a string to allow for the isalpha function to test if there are letters in the rank which should be a number
     int found_date;
-    double graduation_and_transfer_rate;
-    double cost_of_attendence;
+    double transfer_rate;
+    int cost_of_attendence;
     int number_of_students;
     
     cout<<"What is the college's name"<<endl;
@@ -175,11 +176,23 @@ void insertManager(){
         cin>>found_date;
     }
     
-    cout<<"what is the school's graduation_and_transfer_rate"<<endl;
-    cin>>graduation_and_transfer_rate;
-    while(graduation_and_transfer_rate < 0 | graduation_and_transfer_rate > 100){//a percentage can not be less than 0 or greater than 100
+    string website;
+    cout<<"What is the website of the school"<<endl;
+    cin>>website;
+    
+    cout<<"what is the school's transfer_rate"<<endl;
+    cin>>transfer_rate;
+    while(transfer_rate < 0 | transfer_rate > 100){//a percentage can not be less than 0 or greater than 100
         cout<<"the graduation and transfer rate can not be less than 0 or greater than 100"<<endl;
-        cin>>graduation_and_transfer_rate;
+        cin>>transfer_rate;
+    }
+    
+    double retention_rate;
+    cout<<"what is the school's retention rate"<<endl;
+    cin>>retention_rate;
+    while(retention_rate < 0 | retention_rate > 100){//a percentage can not be less than 0 or greater than 100
+        cout<<"the graduation and transfer rate can not be less than 0 or greater than 100"<<endl;
+        cin>>retention_rate;
     }
     
     cout<<"How much does it cost to go to the school"<<endl;
@@ -195,6 +208,10 @@ void insertManager(){
         cout<<"the number of students must be positive"<<endl;
         cin>>number_of_students;
     }
+    int rank_;// the constructor will not accept the rank variable because it is not a int so it needs to be changed into an int
+    rank_ = stoi(rank);//stoi changes the value of something to an int
+    College add(rank_, collegeName, found_date, website, transfer_rate, retention_rate, cost_of_attendence, number_of_students);
+    list.insertNode(add);
 }
 
 /***************************************************************

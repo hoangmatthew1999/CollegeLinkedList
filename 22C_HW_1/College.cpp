@@ -38,6 +38,7 @@ College::College(int r, string n, int y, string w, double t, double re,int co, i
     noStu = no;
 }
 
+
 // Display rank, name, cost, and number of students
 
 void College::display()

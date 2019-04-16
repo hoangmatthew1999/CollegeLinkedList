@@ -29,6 +29,8 @@ public:
     // Constructors
     College();
     College(int r, string n, int y, string w, double t, double re,int co, int no);
+    College(int r, string n, int y, double t, double re,int co, int no);//constructor for the insert manager function
+
     
     // Setters
     void setRank(int r) { rank = r; }
