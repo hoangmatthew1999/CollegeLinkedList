@@ -35,6 +35,8 @@ public:
     
     //Destructor
     ~CollegeList();
+    
+    //operator overloading
 };
 
 #endif /* CollegeList_h */

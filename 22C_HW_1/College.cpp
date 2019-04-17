@@ -65,3 +65,62 @@ void College::displayAll()
     << "          Cost of Attendance: $" << cost << endl
     << "          Number of Students: " << noStu << endl;
 }
+ostream &operator << (ostream &strm,const College &object){
+    strm<<"Rank: "<<object.rank<<" "
+        <<"Name: "<<object.name<<" "
+        <<" Year School Founded: "<<object.year<<" "
+        <<"Website URL"<<object.website<<" "
+        <<"Transfer Rate"<<object.transfer<<" "
+        <<"Retention Rate"<<object.retention<<" "
+        <<"Cost to attend"<<object.cost<<" "
+        <<"noStu"<<object.noStu<<" ";
+    return strm;
+}
+istream &operator >> (istream &strm,College &object){
+    cout<<"What is the school's name"<<endl;
+    strm>>object.name;
+    
+    cout<<"What is the school's rank"<<endl;
+    strm>>object.rank;
+    while(!cin){
+        cout<<"ther is a character in your input. Ranks can only be numbers "<<endl;
+        cin>>object.rank;
+    }
+    
+    cout<<"When was the school found"<<endl;
+    strm>>object.year;
+    while(object.year > 2020){
+        cout<<"The school can not be created in the future"<<endl;
+        cin>>object.year;
+    }
+    
+    cout<<"What is the url of the college";
+    strm>>object.website;
+    
+    cout<<"What is the transfer rate of the colelge"<<endl;
+    strm>>object.transfer;
+    while(object.transfer > 100 | object.transfer < 0){
+        cout<<"A transfer rate must be a t"
+    }
+    
+    cout<<"How many students does the school have"<<endl;
+    strm>>object.noStu;
+    
+    cout<<"What is the cost to attend this school"<<endl;
+    strm>>object.cost;
+    
+    cout<<"What is the first year retention rate of the school"<<endl;
+    strm>>object.retention;
+    
+    return strm;
+}
+/*
+
+ int year;
+ int cost;
+ int noStu;
+ double transfer;
+ double retention;
+ string name;
+ string website;
+ */

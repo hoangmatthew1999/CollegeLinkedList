@@ -55,7 +55,9 @@ public:
     // Other functions
     void display();
     void displayAll();
-    ostream &operator << (ostream &strm);
+    friend ostream &operator << (ostream &, const College &);
+    friend istream &operator >> (istream &, College &);
+
 };
 
 

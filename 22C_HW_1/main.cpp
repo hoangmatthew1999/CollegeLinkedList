@@ -4,7 +4,7 @@
 //
 //  Created by Matthew Hoang on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
-//
+//Complied in XCode 10.2
 
 #include <iostream>
 #include <fstream>
@@ -28,7 +28,7 @@ int main()
     CollegeList list;
     printWelcome();
     buildList(inputFileName, list);
-    //list.displayList();
+    //list.displayList(); this part of the program broke
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     searchManager(list);
     deleteManager(list);
@@ -155,7 +155,7 @@ void insertManager(CollegeList &list){
     double transfer_rate;
     int cost_of_attendence;
     int number_of_students;
-    
+    /*
     cout<<"What is the college's name"<<endl;
     cin>>collegeName;
     
@@ -208,37 +208,31 @@ void insertManager(CollegeList &list){
         cout<<"the number of students must be positive"<<endl;
         cin>>number_of_students;
     }
+     */
+    College cin_operator_overload;//starts with the default constructor and adds the elements in the cin
+    cin>>cin_operator_overload;
+    cout<<cin_operator_overload;//showing the use of overloading << operator
+    list.insertNode(cin_operator_overload);
+
+    /*
     int rank_;// the constructor will not accept the rank variable because it is not a int so it needs to be changed into an int
     rank_ = stoi(rank);//stoi changes the value of something to an int
+    
     College add(rank_, collegeName, found_date, website, transfer_rate, retention_rate, cost_of_attendence, number_of_students);
     list.insertNode(add);
+    cout<<add;//showing the use of overloading << operator
+     */
 }
 
 /***************************************************************
  Save the OUTPUT below
  
- 
+
  
  *~~*~~* WELCOME *~~*~~*
  
  to the College Linked List Project!
  
- 
- ==== ============================= ========= ==========
- Rank          Name                    Cost      NoStu
- ==== ============================= ========= ==========
- 12 College of the Siskiyous        21936       2473
- 10 Cuesta College                  19135       9571
- 1 De Anza College                 19302      24187
- 4 Diablo Valley College           20579      22000
- 6 Foothill College                19302      18362
- 9 Irvine Valley College           20577      14384
- 7 Napa Valley College             18920       8996
- 8 Ohlone College                  15878      18000
- 15 Palo Verde College              18266       3898
- 5 Pasadena City College           17666      26057
- 3 Santa Barbara City College      18524      30687
- ==== ============================= ========= ==========
  There are 11 college(s) in your list.
  
  
@@ -258,9 +252,17 @@ void insertManager(CollegeList &list){
  Number of Students: 24187
  
  Enter a college's name for search (or Q for stop searching):
- ABC College
+ Foothill College
  
- College ABC College was not found in this list.
+ Rank: 6
+ Name: Foothill College
+ Founded: 1957
+ Website: http://www.foothill.edu
+ Graduation and Transfer Rate: 68.8%
+ First Year Retention Rate: 87.5%
+ Cost of Attendance: $19302
+ Number of Students: 18362
+ 
  Enter a college's name for search (or Q for stop searching):
  Q
  
@@ -270,27 +272,37 @@ void insertManager(CollegeList &list){
  Delete
  =======
  
+ Enter a college's name for delete (or Q for stop searching): De Anza College
+ Deleted
+ 
  Enter a college's name for delete (or Q for stop searching): Q
  ___________________END DELETE SECTION_____
- There are 11 college(s) in your list.
+ There are 10 college(s) in your list.
  
  
  
  *~~*~~* THE END *~~*~~*
  Thank you for using my program!
  
- DEBUG - Destructor: Now deleting College of the Siskiyous
+ What is the college's name
+ qwe
+ What is the college's rank
+ 123
+ when was the school found
+ 123
+ What is the website of the school
+ qew
+ what is the school's transfer_rate
+ 12
+ what is the school's retention rate
+ 12
+ How much does it cost to go to the school
+ 12
+ What is the school's population
+ 12
+ Rank: 123 Name: qwe  Year School Founded: 123 Website URLqew Transfer Rate12 Retention Rate12 Cost to attend12 noStu12 DEBUG - Destructor: Now deleting College of the Siskiyous
  DEBUG - Destructor: Now deleting Cuesta College
- DEBUG - Destructor: Now deleting De Anza College
  DEBUG - Destructor: Now deleting Diablo Valley College
- DEBUG - Destructor: Now deleting Foothill College
- DEBUG - Destructor: Now deleting Irvine Valley College
- DEBUG - Destructor: Now deleting Napa Valley College
- DEBUG - Destructor: Now deleting Ohlone College
- DEBUG - Destructor: Now deleting Palo Verde College
- DEBUG - Destructor: Now deleting Pasadena City College
- DEBUG - Destructor: Now deleting Santa Barbara City College
- DEBUG - Destructor: Now deleting the sentinel node rank -1
  
  */
 
