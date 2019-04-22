@@ -1,7 +1,7 @@
 //
 //  CollegeList.cpp
 //  22C_HW_1
-//
+//College List implementation file that creates the all the functions for the linked list object
 //  Created by home on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
 //
@@ -165,6 +165,20 @@ CollegeList::~CollegeList()
     cout << "DEBUG - Destructor: Now deleting the sentinel node rank " << head -> col.getRank() << endl;
     delete head; // delete the sentinel node
 }
+
+  // Overloaded ==
+/*
+bool CollegeList::operator ==(const College &object) {
+    if(col.getName() == target){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+ */
+
+
 
 
 

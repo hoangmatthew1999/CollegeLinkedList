@@ -1,7 +1,7 @@
 //
 //  College.h
 //  22C_HW_1
-//
+//header file for the 
 //  Created by home on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
 //

@@ -1,7 +1,7 @@
 //
 //  CollegeList.h
 //  22C_HW_1
-//
+//Header file for the CollegeList.cpp that has all the functions declared
 //  Created by home on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
 //
@@ -37,6 +37,8 @@ public:
     ~CollegeList();
     
     //operator overloading
+    bool operator == (const College &);    // Overloaded ==
+
 };
 
 #endif /* CollegeList_h */
