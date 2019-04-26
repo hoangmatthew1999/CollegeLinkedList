@@ -1,26 +1,16 @@
 //
-//  CollegeList.cpp
+//  D_List.cpp
 //  22C_HW_1
-//College List implementation file that creates the all the functions for the linked list object
-//  Created by home on 4/11/19.
+//
+//  Created by home on 4/24/19.
 //  Copyright © 2019 home. All rights reserved.
 //
-#include <iostream>         // For cout  and NULL
-#include <fstream>
-#include <iomanip>
-#include "CollegeList.h"
+
+#include "D_List.hpp"
+#include <iostream>
 using namespace std;
 
-
-//**************************************************
-// Constructor
-// This function allocates and initializes a sentinel node
-//      A sentinel (or dummy) node is an extra node added before the first data record.
-//      This convention simplifies and accelerates some list-manipulation algorithms,
-//      by making sure that all links can be safely dereferenced and that every list
-//      (even one that contains no data elements) always has a "first" node.
-//**************************************************
-CollegeList::CollegeList()
+DList::DList()
 {
     head = new ListNode; // head points to the sentinel node
     head->next = NULL;
@@ -31,7 +21,7 @@ CollegeList::CollegeList()
 // The insertNode function inserts a node with
 // stu copied to its value member.
 //**************************************************
-void CollegeList::insertNode(College dataIn)
+void DList::insertNode(College &dataIn)
 {
     ListNode *newNode;  // A new node
     ListNode *pCur;     // To traverse the list
@@ -63,7 +53,7 @@ void CollegeList::insertNode(College dataIn)
 // with num as its value. The node, if found, is
 // deleted from the list and from memory.
 //**************************************************
-bool CollegeList::deleteNode(string target)
+bool DList::deleteNode(string target)
 {
     ListNode *pCur;       // To traverse the list
     ListNode *pPre;        // To point to the previous node
@@ -96,7 +86,7 @@ bool CollegeList::deleteNode(string target)
 //**************************************************
 // Search function shows if the college name is match with what the user enters
 //**************************************************
-bool CollegeList::searchList(string target, College &dataOut)
+bool DList::searchList(string target, College &dataOut)
 {
     ListNode *pCur;
     pCur = head -> next;
@@ -117,7 +107,7 @@ bool CollegeList::searchList(string target, College &dataOut)
 // Display function shows every college name with their rank and cost.
 //**************************************************
 
-void CollegeList::displayList() const
+void DList::displayList() const
 {
     ListNode *pCur;  // To move through the list
     
@@ -141,7 +131,7 @@ void CollegeList::displayList() const
 // Destructor                                      *
 // This function deletes every node in the list.   *
 //**************************************************
-CollegeList::~CollegeList()
+DList::~DList()
 {
     ListNode *pCur;   // To traverse the list
     ListNode *pNext;  // To point to the next node
@@ -165,22 +155,3 @@ CollegeList::~CollegeList()
     cout << "DEBUG - Destructor: Now deleting the sentinel node rank " << head -> col.getRank() << endl;
     delete head; // delete the sentinel node
 }
-
-  // Overloaded ==
-/*
-bool CollegeList::operator ==(const College &object) {
-    
-    if(col.getName() == target){
-        return true;
-    }
-    else{
-        return false;
-    }
- 
-}
- */
-
-
-
-
-

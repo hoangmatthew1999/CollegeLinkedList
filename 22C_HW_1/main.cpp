@@ -5,6 +5,23 @@
 //  Created by Matthew Hoang on 4/11/19.
 //  Copyright © 2019 home. All rights reserved.
 //Complied in XCode 10.2
+/*
+ CIS 22C: Homework 0 - Extra Credit
+ 
+ This program will:
+ Build and procees a sorted linked list of College objects.
+ The list is sorted in ascending order by college name
+ Assume that the college name is unique.
+ - Print the list as a table with the following columns: rank, name, and cost.
+ - Print the list as a table with the following columns: year, name, and noStu.
+ - Search: prompt the user to enter a college’s name, search for that name: if found, display its’ data (all members), otherwise display some message, such as ... Not found.
+ - Show the number of elements in the list before delete.
+ - Delete: prompt the user to enter the college’s name to be
+ deleted – put this in a loop, to delete more items from the list; to stop the loop enter Q.
+ - Show the number of elements in the list after delete.
+ - Destroy list //no memory leak.
+ -has a function to add a College object into the linked list
+ */
 
 #include <iostream>
 #include <fstream>
@@ -35,7 +52,6 @@ int main()
     cout <<  "\t\tThere are " << list.getCount() << " college(s) in your list.\n\n";
     printDone();
     insertManager(list);
-    
     return 0;
 }
 /*********************************************************************
@@ -149,79 +165,15 @@ void printDone(void)
     << "\t     Thank you for using my program! \n\n";
 }
 void insertManager(CollegeList &list){
-    string collegeName;
-    string rank;//is a string to allow for the isalpha function to test if there are letters in the rank which should be a number
-    int found_date;
-    double transfer_rate;
-    int cost_of_attendence;
-    int number_of_students;
-    /*
-    cout<<"What is the college's name"<<endl;
-    cin>>collegeName;
-    
-    cout<<"What is the college's rank"<<endl;
-    cin>>rank;
-    for(int i = 0; i < rank.length();i++){
-        if(isalpha(rank[i]) != 0){
-            cout<<"There is a letter in the rank variable"<<endl;
-            cin>>rank;
-            i = 0;//resets the loop to check again if there is a letter in the string
-        }
-    }
-    
-    cout<<"when was the school found"<<endl;
-    cin>>found_date;
-    while(found_date > 2019){
-        cout<<"The school can not be found in the future"<<endl;
-        cin>>found_date;
-    }
-    
-    string website;
-    cout<<"What is the website of the school"<<endl;
-    cin>>website;
-    
-    cout<<"what is the school's transfer_rate"<<endl;
-    cin>>transfer_rate;
-    while(transfer_rate < 0 | transfer_rate > 100){//a percentage can not be less than 0 or greater than 100
-        cout<<"the graduation and transfer rate can not be less than 0 or greater than 100"<<endl;
-        cin>>transfer_rate;
-    }
-    
-    double retention_rate;
-    cout<<"what is the school's retention rate"<<endl;
-    cin>>retention_rate;
-    while(retention_rate < 0 | retention_rate > 100){//a percentage can not be less than 0 or greater than 100
-        cout<<"the graduation and transfer rate can not be less than 0 or greater than 100"<<endl;
-        cin>>retention_rate;
-    }
-    
-    cout<<"How much does it cost to go to the school"<<endl;
-    cin>>cost_of_attendence;
-    while(cost_of_attendence < 0){
-        cout<<"Cost of attendence can not be negative"<<endl;
-        cin>>cost_of_attendence;
-    }
-    
-    cout<<"What is the school's population"<<endl;
-    cin>>number_of_students;
-    while(number_of_students < 0){
-        cout<<"the number of students must be positive"<<endl;
-        cin>>number_of_students;
-    }
-     */
+    /*********************
+     insertManager method that adds
+     **********************/
     College cin_operator_overload;//starts with the default constructor and adds the elements in the cin
     cin>>cin_operator_overload;
     cout<<cin_operator_overload;//showing the use of overloading << operator
     list.insertNode(cin_operator_overload);
 
-    /*
-    int rank_;// the constructor will not accept the rank variable because it is not a int so it needs to be changed into an int
-    rank_ = stoi(rank);//stoi changes the value of something to an int
     
-    College add(rank_, collegeName, found_date, website, transfer_rate, retention_rate, cost_of_attendence, number_of_students);
-    list.insertNode(add);
-    cout<<add;//showing the use of overloading << operator
-     */
 }
 
 /***************************************************************

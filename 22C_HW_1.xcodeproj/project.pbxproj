@@ -10,6 +10,7 @@
 		F419AE232260057900AA7A53 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F419AE222260057900AA7A53 /* main.cpp */; };
 		F419AE2E226031A200AA7A53 /* College.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F419AE2C226031A200AA7A53 /* College.cpp */; };
 		F419AE322260359A00AA7A53 /* CollegeList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F419AE302260359A00AA7A53 /* CollegeList.cpp */; };
+		F4211B112271740E006CD2C8 /* D_List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4211B0F2271740E006CD2C8 /* D_List.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		F419AE2C226031A200AA7A53 /* College.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = College.cpp; sourceTree = "<group>"; };
 		F419AE302260359A00AA7A53 /* CollegeList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollegeList.cpp; sourceTree = "<group>"; };
 		F419AE312260359A00AA7A53 /* CollegeList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollegeList.hpp; sourceTree = "<group>"; };
+		F4211B0F2271740E006CD2C8 /* D_List.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = D_List.cpp; sourceTree = "<group>"; };
+		F4211B102271740E006CD2C8 /* D_List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = D_List.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F419AE222260057900AA7A53 /* main.cpp */,
 				F419AE29226005B900AA7A53 /* CollegeList.h */,
 				F419AE302260359A00AA7A53 /* CollegeList.cpp */,
+				F4211B0F2271740E006CD2C8 /* D_List.cpp */,
+				F4211B102271740E006CD2C8 /* D_List.hpp */,
 				F419AE312260359A00AA7A53 /* CollegeList.hpp */,
 				F419AE2A226005EC00AA7A53 /* College.h */,
 				F419AE2C226031A200AA7A53 /* College.cpp */,
@@ -132,6 +137,7 @@
 			files = (
 				F419AE232260057900AA7A53 /* main.cpp in Sources */,
 				F419AE2E226031A200AA7A53 /* College.cpp in Sources */,
+				F4211B112271740E006CD2C8 /* D_List.cpp in Sources */,
 				F419AE322260359A00AA7A53 /* CollegeList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
