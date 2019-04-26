@@ -169,14 +169,20 @@ CollegeList::~CollegeList()
   // Overloaded ==
 /*
 bool CollegeList::operator ==(const College &object) {
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0423bdaeae57fd8a167b0a2fde732a5691395676
     if(col.getName() == target){
         return true;
     }
     else{
         return false;
     }
+<<<<<<< HEAD
  
+=======
+>>>>>>> 0423bdaeae57fd8a167b0a2fde732a5691395676
 }
  */
 
