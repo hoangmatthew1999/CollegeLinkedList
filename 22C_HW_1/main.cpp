@@ -29,7 +29,7 @@
 #include <cstdlib>
 #include "CollegeList.h"
 #include "College.h"
-
+#include "D_List.hpp"
 using namespace std;
 
 void printWelcome();
@@ -42,7 +42,7 @@ void insertManager(CollegeList &list);
 int main()
 {
     const char inputFileName[] = "colleges.txt";
-    CollegeList list;
+    DList list;
     printWelcome();
     buildList(inputFileName, list);
     //list.displayList(); this part of the program broke

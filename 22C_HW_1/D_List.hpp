@@ -19,19 +19,19 @@ public:
         double_link *next;
         double_link *previous;
 };
-    int count;
+    //int count;
     DList();
     void insertNode(College & dataIn);
     bool deleteNode(string);
     bool searchList(string,College & );
     void traverseForward();
     void traverseBackward();
-    void getCount();
+    //void getCount();
     bool isEmpty();
     void displayList() const;
     ~DList();
     
     
-    
+
 };
 #endif /* D_List_hpp */
